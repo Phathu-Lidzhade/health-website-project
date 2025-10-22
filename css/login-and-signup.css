@@ -1,0 +1,181 @@
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+
+/* Apply centering to the whole body */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  background: #d6d1d1e3;
+}
+
+/* Container is now sized and centered by body */
+.container {
+  display: flex !important;
+  width: 700px !important;
+  height: auto !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.left-panel {
+  flex: 1;
+  background-color: #008e78;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.left-panel .icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.left-panel h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.left-panel .tagline {
+  color: #19f608;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.left-panel .credit {
+  font-size: 10px;
+  color: #00f20d;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 60px;
+  
+  flex-direction: column;
+  
+  background: white;
+}
+
+.right-panel h2 {
+  color: #009178;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-btn {
+  background-color: #009178;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.signup-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.signup-btn {
+  background-color: #ff9999;
+  color: white;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#signup-btn {
+  background-color: #ff9999;
+  color: white;
+  width: 100px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.admin-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.admin-btn {
+  background-color: #ff9999;
+  color: white;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#admin-btn {
+  background-color: #ff9999;
+  color: white;
+  width: 100px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

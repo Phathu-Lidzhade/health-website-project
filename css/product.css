@@ -1,0 +1,300 @@
+
+    /* Customer Dashboard Style - Warm and Welcoming */
+:root {
+    --primary: #4A90E2;    
+    --secondary: #7ED321;  
+    --background: #F8F9FF; 
+    --text: #2D3436;       
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+}
+
+    .customer-nav {
+    background: white;
+    position: relative;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medication-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.medication-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.medication-card:hover {
+    transform: translateY(-5px);
+}
+
+.medication-image {
+    width: 100%; /* Ensures it takes up the full width of its parent */
+    height: 180px; /* Keeps the intended height */
+    background: #f0f4ff;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden; /* Prevents image overflow */
+}
+
+.medication-image img {
+    width: 100%; /* Ensures the image fits */
+    height: 100%; /* Forces it to stay within the container */
+    object-fit: cover; /* Prevents distortion and crops excess */
+    border-radius: 12px; /* Matches the container */
+}
+
+.pharmacy-name{
+    color: var(--primary);
+    position: relative;
+}
+
+.order-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar {
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 2rem auto;
+    display: block;
+}
+.logout-btn {
+    background: var(--primary);
+    position: absolute;
+    left: 25px;
+    top: 75px;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.orders-btn {
+    background: var(--primary);
+    position: absolute;
+    right: 20px;
+    top: 75px;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.search-input{
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+.search-btn{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary);
+    color: white;
+}
+
+.user-profile {
+    display: flex;
+    position: relative;
+    left: 137px;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cart-counter {
+    cursor: pointer;
+}
+
+.order {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.order-content {
+    background: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+/* Container holding the buttons and the input */
+.number-input-container {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    width: 150px; /* Adjust the width of the entire container */
+}
+
+/* Style for the number input */
+.number-input-container input.inner-order-content {
+    width: 30px; /* Width of the input field */
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 130px;
+    font-size: 18px;
+}
+
+/* Style for the buttons */
+.number-input-container button {
+    background: var(--primary);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Hover effect for the buttons */
+.number-input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Focus effect for the input */
+.number-input-container input.inner-order-content:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+/* Remove the spinner (up/down buttons) in Webkit browsers (Chrome, Safari) */
+input.inner-order-content::-webkit-outer-spin-button,
+input.inner-order-content::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.order-btn{
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* ---- Cart Icon ---- */
+#cartContainer {
+    position: fixed; top: 20px; right: 20px;
+    z-index: 100;
+  }
+  .cart-btn {
+    position: relative; background: none; border: none; cursor: pointer;
+  }
+  #cartCount {
+    position: absolute; top: -6px; right: -6px;
+    background: red; color: white; font-size: 12px;
+    padding: 2px 5px; border-radius: 50%;
+  }
+  
+  /* ---- Cart Modal ---- */
+  #cartModal {
+    position: fixed; top: 0; right: 0;
+    width: 300px; height: 100vh;
+    background: #fff; box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(100%); transition: transform 0.3s ease;
+    display: flex; flex-direction: column;
+  }
+  #cartModal:not(.hidden) {
+    transform: translateX(0);
+  }
+  
+  /* Header */
+  .cart-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1em; border-bottom: 1px solid #eee;
+  }
+  .modal-close {
+    background: none; border: none; font-size: 20px; cursor: pointer;
+  }
+  
+  /* Items list */
+  #cartItemsList {
+    flex: 1; overflow-y: auto;
+    list-style: none; margin: 0; padding: 1em;
+  }
+  #cartItemsList li {
+    display: flex; justify-content: space-between; margin-bottom: 0.5em;
+  }
+  
+  /* Footer */
+  .cart-footer {
+    padding: 1em; border-top: 1px solid #eee;
+    text-align: right;
+  }
+  /* ---- Hide cart icon when cart is open ---- */
+#cartContainer.hidden {
+    display: none;
+  }
+  
+  /* ---- Cart icon styling (unchanged) ---- */
+  #cartContainer { position: fixed; top:20px; right:20px; z-index:100; }
+  .cart-btn { position:relative; background:none; border:none; cursor:pointer; }
+  #cartCount { position:absolute; top:-6px; right:-6px; background:red; color:white; font-size:12px; padding:2px 5px; border-radius:50%; }
+  
+  /* ---- Cart Modal sliding panel ---- */
+  #cartModal {
+    position: fixed; top:0; right:0;
+    width:300px; height:100vh;
+    background:#fff; box-shadow:-4px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(100%); transition: transform 0.3s ease;
+    display:flex; flex-direction:column;
+  }
+  #cartModal:not(.hidden) {
+    transform: translateX(0);
+  }
+  
+  /* Header */
+  .cart-header { display:flex; justify-content:space-between; align-items:center; padding:1em; border-bottom:1px solid #eee; }
+  .modal-close { background:none; border:none; font-size:20px; cursor:pointer; }
+  
+  /* Items list */
+  #cartItemsList { flex:1; overflow-y:auto; list-style:none; margin:0; padding:1em; }
+  #cartItemsList li { display:flex; justify-content:space-between; margin-bottom:0.5em; }
+  
+  /* Footer */
+  .cart-footer { padding:1em; border-top:1px solid #eee; text-align:right; }
+  

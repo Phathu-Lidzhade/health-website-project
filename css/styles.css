@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: poppins, sans-serif;
+  overflow: hidden;
+}
+.header{
+  text-align: center;
+  width: 300px;
+  background-color: aqua;
+  position: absolute;
+  top: 30px;
+  left: 300px;
+  border: 300px;
+}
+
+.left-section{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background: #188a29;
+  padding: 60px 20px;
+  width: 200px;
+  height: 100vh;
+}
+.admin-name{
+  background-color: rgb(86, 243, 86);
+  color: black;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 180px;
+  text-align: center;
+}
+.workbench{
+  background-color: rgb(86, 243, 86);
+  color: black;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.inventory{
+  background-color: rgb(86, 243, 86);
+  color: black;
+  border-radius: 50px;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+.prescription{
+  background-color: aqua;
+  width: 200px;
+  height: 230px;
+  position: relative;
+  left: 500px;
+  bottom: 500px;
+  text-align: center;
+  border-radius: 50px;
+}

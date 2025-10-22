@@ -1,0 +1,201 @@
+
+/* Modern Professional Dashboard Style */
+:root {
+    --primary: #2f40ff;    /* Deep navy */
+    --secondary: #4c7bfb;   /* Vibrant blue */
+    --accent: #00C853;      /* Positive green */
+    --alert: #D50000;       /* Attention red */
+    --background: #F8F9FF;  /* Light background */
+    --text: #2D3436;        /* Primary text */
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 100vh;
+}
+
+/* Enhanced Sidebar */
+.sidebar {
+    background: white;
+    padding: 2rem 1.5rem;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.08);
+    border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-header {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: black
+}
+
+.nav-item:hover {
+    background: var(--secondary);
+    transform: translateX(4px);
+}
+
+.nav-item.active {
+    background: var(--primary);
+    color: white;
+}
+.graph-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+}
+
+#analyticsChart {
+    width: 100% !important;
+    height: 500px !important;
+}
+
+
+.graph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.date-filter {
+    background: var(--background);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #e0e7ff;
+}
+
+/**/
+
+    .prescriptions-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.prescription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.prescription-list {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.prescription-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr auto;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    transition: background 0.2s ease;
+}
+
+.prescription-item:hover {
+    background: #f8f9ff;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.patient-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.medication-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.status-indicator {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9em;
+    width: fit-content;
+}
+
+.status-pending {
+    background: #FFF3E0;
+    color: #EF6C00;
+}
+
+.status-approved {
+    background: #E8F5E9;
+    color: #00C853;
+}
+.status-rejected {
+    background: #E8F5E9;
+    color: #c84300;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-approve {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-reject {
+    background: var(--alert);
+    color: white;
+}
+
+.prescription-search {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 300px;
+}
+

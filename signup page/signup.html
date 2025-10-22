@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login-and-signup.css">
+  <title>Sign Up - Online Pharmacy</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+          <img src="../icons/herbal.png">
+          <h1>Company name</h1>
+          <p class="tagline">Health Through Nature</p>
+          <p class="credit">Image by @https://www.flaticon.com/free-icons</p>
+        </div>
+        <div class="right-panel">
+          <form action="signup.php" method="post"  id="loginForm">
+
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+    
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+    
+            <label >Admin code (Only if you're an admin)</label>
+            <input name="admin_code">
+    <!--
+            <label for="confirm">Confirm Password</label>
+            <input type="password" id="confirm" name="pwd" required>
+    -->
+            <button type="submit" id="signup-btn">Sign Up</button>
+            
+            <div class="login-row">
+                <span>Already have an account?</span>
+                <button type="button" class="login-btn"> <a href="../index.html" target="_self">Login</a> </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </body>
+    </html>
