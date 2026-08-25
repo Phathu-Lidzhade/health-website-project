@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Orders</title>
+  <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body>
+  <h1>My Orders</h1>
+
+  <form action="../products page/products.html">
+    <button class="back-btn" type="submit">Back</button>
+  </form>
+
+  <div id="ordersContainer">
+    <!-- Orders will be injected here -->
+  </div>
+
+  <!-- Template for a single order -->
+  <template id="orderTemplate">
+    <div class="order-card">
+
+      <div class="order-header">
+        <span>Order #<span class="order-id"></span></span>
+        <span class="order-date"></span>
+      </div>
+
+      <div class="order-body">
+        <ul class="items-list"></ul>
+      </div>
+      
+      <div class="order-footer">
+        <span class="status"></span>
+        <span class="total"></span>
+      </div>
+    </div>
+  </template>
+
+
+  <script src="../scripts/orders.js"></script>
+</body>
+</html>
+

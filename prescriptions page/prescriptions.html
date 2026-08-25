@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Review - Pharma</title>
+    <link rel="stylesheet" href="../css/sales-and-prescriptons-page.css">
+   
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+       <aside class="sidebar">
+            <div class="nav-header">
+                <h2>Pharma</h2>
+            </div>
+            <div class="nav-item">
+              <a href="../admin page/admin.html" >📦 Inventory Management</a>  
+            </div>
+            <div class="nav-item active">
+              <a href="prescriptions.html" style="color: white; ">📝 Prescription Review</a>  
+            </div>
+            <div class="nav-item">
+                <a href="../sale page/sales.html">📊 Sales Analytics</a>   
+            </div>
+            <div class="nav-item">
+                ⚙️ System Settings
+                <span>coming soon.....</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="prescriptions-container">
+                <div class="prescription-header">
+                    <h2>Prescription Review</h2>
+                    <input type="text" 
+                           class="prescription-search" 
+                           placeholder="🔍 Search prescriptions...">
+                </div>
+
+                <div class="prescription-list">
+                    <!-- Prescription Item -->
+                    <div class="prescription-item">
+                        <div class="patient-info">
+                            <div class="patient-avatar">JD</div>
+                            <div>
+                                <div class="patient-name">John Doe</div>
+                                <div class="patient-id">#PT-2354</div>
+                            </div>
+                        </div>
+
+                        <div class="medication-details">
+                            <strong>Amoxicillin 500mg</strong>
+                            <span>1 Tablet 3x Daily - 10 Days</span>
+                            <small>Rx #234-567890</small>
+                        </div>
+
+                        <div class="prescriber">Dr. Sarah Smith</div>
+                        
+                        <div class="status-indicator status-pending">
+                            Pending Review
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn btn-approve">Approve</button>
+                            <button class="btn btn-reject">Reject</button>
+                        </div>
+                    </div>
+
+                    <!-- Additional prescription items... -->
+                </div>
+
+                <!-- Accepted Prescriptions -->
+            <div class="prescription-container" id="accepted">
+                <div class="prescription-header">
+                    <h2>Accepted Prescriptions</h2>
+                </div>
+                <div class="prescription-list">
+                    <!-- Accepted Prescription Item -->
+                    <div class="prescription-item status-approved finalized-prescription">
+                        <div class="patient-info">
+                            <div class="patient-avatar">MS</div>
+                            <div>
+                                <div class="patient-name">Mary Smith</div>
+                                <div class="patient-id">#PT-6892</div>
+                            </div>
+                        </div>
+                        <div class="medication-details">
+                            <strong>Lisinopril 10mg</strong>
+                            <span>1 Tablet Daily - 30 Days</span>
+                            <small>Rx #987-654321</small>
+                        </div>
+                        <div class="prescriber">Dr. James Wilson</div>
+                        <div class="status-indicator">
+                            Approved - 03/15/2024
+                        </div>
+                        <div class="action-buttons"></div>
+                    </div>
+
+                    <div class="prescription-item status-approved finalized-prescription">
+                        <div class="patient-info">
+                        <div class="patient-avatar">TJ</div>
+                        <div>
+                        <div class="patient-name">Thomas Johnson</div>
+                        <div class="patient-id">#PT-7451</div>
+                        </div>
+                    </div>
+                         <div class="medication-details">
+                        <strong>Ibuprofen 400mg</strong>
+                        <span>1 Tablet Every 8 Hours - 14 Days</span>
+                        <small>Rx #123-456789</small>
+                         </div>
+                        <div class="prescriber">Dr. Emily Carter</div>
+                        <div class="status-indicator">
+                            Approved - 05/08/2025
+                        </div>
+                        <div class="action-buttons"></div>
+                    </div>
+                    <!-- More accepted items... -->
+                </div>
+            </div>
+
+            <!-- Rejected Prescriptions -->
+            <div class="prescription-container" id="rejected">
+                <div class="prescription-header">
+                    <h2>Rejected Prescriptions</h2>
+                </div>
+                <div class="prescription-list">
+                    <!-- Rejected Prescription Item -->
+                    <div class="prescription-item status-rejected finalized-prescription">
+                        <div class="patient-info">
+                            <div class="patient-avatar">TJ</div>
+                            <div>
+                                <div class="patient-name">Tom Johnson</div>
+                                <div class="patient-id">#PT-1123</div>
+                            </div>
+                        </div>
+                        <div class="medication-details">
+                            <strong>Oxycodone 5mg</strong>
+                            <span>2 Tablets Daily - 7 Days</span>
+                            <small>Rx #654-321987</small>
+                        </div>
+                        <div class="prescriber">Dr. Emily Brown</div>
+                        <div class="status-indicator">
+                            Rejected - 03/14/2024 (Out of stock)
+                        </div>
+                        <div class="action-buttons"></div>
+                    </div>
+                    <!-- More rejected items... -->
+                </div>
+            </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

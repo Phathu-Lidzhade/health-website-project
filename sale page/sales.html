@@ -1,0 +1,65 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - PharmaCare Pro</title>
+    <link rel="stylesheet" href="../css/sales-and-prescriptons-page.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../scripts/graphs.js"></script>
+
+    
+   </head>
+
+<body>
+    <div class="dashboard-container">
+        
+       <aside class="sidebar">
+            <div class="nav-header">
+                <h2>Pharma</h2>
+            </div>
+            <div class="nav-item">
+              <a href="../admin page/admin.html">📦 Inventory Management</a>  
+            </div>
+            <div class="nav-item">
+                <a href="../prescriptions page/prescriptions.html">📝 Prescription Review</a>
+            </div>
+            <div class="nav-item active">
+                <a href="sales.html" style="color: white; ">📊 Sales Analytics</a>   
+            </div>
+            <div class="nav-item">
+                ⚙️ System Settings
+                <span>coming soon.....</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-content">
+            <div class="alert-panel">
+                📈 Live Analytics Data Updated: 15 minutes ago
+            </div>
+
+        
+           
+            <div class="main-graph-container">
+                <div class="graph-header">
+                    <h3>Sales Performance Analysis</h3>
+                    <div class="chart-actions">
+                        <button class="chart-filter">Daily</button>
+                        <button class="chart-filter">Weekly</button>
+                        <button class="chart-filter">Monthly</button>
+                    </div>
+
+                </div>
+                <div class="graph-container">
+                    <div id="chart_lines" style="width: 900px; height: 500px;"></div>
+            </div>
+               <div class="graph-container">
+                    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

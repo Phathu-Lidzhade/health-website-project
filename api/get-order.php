@@ -15,7 +15,8 @@ header('Content-Type: application/json');
 
 // 1) Ensure user is logged in
 if (empty($_SESSION['user_id'])) {
-    echo json_encode([]);
+    http_response_code(401);
+    echo json_encode(['error' => 'Not authenticated']);
     exit;
 }
 $userId = $_SESSION['user_id'];
@@ -23,7 +24,7 @@ $userId = $_SESSION['user_id'];
 // 2) Fetch all orders for this user
 $stmt = $pdo->prepare("
     SELECT 
-      order_id,
+      orders_id,
       total,
       status,
       created_at
@@ -39,7 +40,7 @@ foreach ($orders as &$order) {
     $stmt2 = $pdo->prepare("
         SELECT 
           oi.product_id,
-          p.name          AS product_name,
+          p.names          AS product_name,
           oi.quantity,
           oi.price
         FROM order_items oi
@@ -47,7 +48,7 @@ foreach ($orders as &$order) {
           ON p.product_id = oi.product_id
         WHERE oi.order_id = ?
     ");
-    $stmt2->execute([$order['order_id']]);
+    $stmt2->execute([$order['orders_id']]);
     $items = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
     // Attach items array to this order

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacist Dashboard - PharmaCare Pro</title>
+    <link rel="stylesheet" href="../css/admin-page.css">
+       
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="nav-header">
+                <h2>Pharma</h2>
+            </div>
+            <div class="nav-item active">
+              <a href="admin.html" style="color: white; ">📦 Inventory Management</a>  
+            </div>
+            <div class="nav-item">
+                <a href="../prescriptions page/prescriptions.html">📝 Prescription Review</a>
+            </div>
+            <div class="nav-item">
+                <a href="../sale page/sales.html">📊 Sales Analytics</a>   
+            </div>
+            <div class="nav-item">
+                ⚙️ System Settings
+                <span>coming soon.....</span>
+            </div>
+
+            <form action="../index.html" method="post">
+                <button class="logout-btn" type="submit">Logout</button>
+            </form>
+
+        </aside>
+
+        
+        <main class="main-content">
+            
+            <div class="alert-panel">
+                ⚠️ 3 Critical Stock Alerts • 2 Prescriptions Need Verification
+            </div>
+
+            
+            <h2>Dashboard Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Inventory Value</h3>
+                    <p style="font-size: 2em; margin: 0.5rem 0;">$24,560</p>
+                    <span style="color: var(--accent);">↑ 12% from last month</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Orders</h3>
+                    <p style="font-size: 2em; margin: 0.5rem 0;">28</p>
+                    <span style="color: var(--alert);">↓ 15% from last week</span>
+                </div>
+            </div>
+
+            <!-- Inventory Table -->
+            <h2>Inventory Summary</h2>
+            <div class="inventory-table">
+                <div class="table-header">
+                    <span>Medication</span>
+                    <span>Stock</span>
+                    <span>Last Ordered</span>
+                    <span>Status</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Amoxicillin 500mg</span>
+                    <span>142 units</span>
+                    <span>2 days ago</span>
+                    <span style="color: var(--accent);">● In Stock</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Cetirizine 10mg</span>
+                    <span>200 units</span>
+                    <span>3 days ago</span>
+                    <span style="color: var(--accent);">● In Stock</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Paracetamol 500mg</span>
+                    <span>140 units</span>
+                    <span>5 days ago</span>
+                    <span style="color: var(--alert);">● Out of Stock</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Azithromycin 250mg</span>
+                    <span>60 units</span>
+                    <span>3 days ago</span>
+                    <span style="color: var(--alert);">● Out of Stock</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Simvastatin 20mg</span>
+                    <span>220 units</span>
+                    <span>6 days ago</span>
+                    <span style="color: var(--accent);">● In Stock</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Losartan 50mg</span>
+                    <span>110 units</span>
+                    <span>2 weeks ago</span>
+                    <span style="color: var(--alert);">● Out of Stock</span>
+                </div>
+
+                <div class="table-row">
+                    <span>Prednisone 10mg</span>
+                    <span>170 units</span>
+                    <span> days ago</span>
+                    <span style="color: var(--accent);">● In Stock</span>
+                </div>
+                
+                
+            </div>
+            
+
+            
+            <div class="chart-container">
+    <div class="chart-header">
+        <h3>Monthly Sales Trend</h3>
+        <div class="chart-actions">
+            <button class="chart-filter">Last 30 Days</button>
+            <button class="chart-filter">YTD</button>
+        </div>
+    </div>
+    
+    
+    <div class="chart-image-container">
+        <img src="../images/graph.jpeg" 
+             alt="Monthly Sales Trend Analysis" 
+             class="chart-image">
+        <div class="chart-overlay">Live Data Updated: 2h ago</div>
+    </div>
+    
+    <div class="chart-footer">
+        <span class="chart-caption">Figure 1: Monthly sales performance analysis showing revenue trends and forecast projections</span>
+    </div>
+</div>
+        </main>
+    </div>
+</body>
+</html>

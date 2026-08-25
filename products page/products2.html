@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Pharmacy</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="../scripts/search.js"></script>
+    <script src="../scripts/cart.js"></script>
+
+   
+</head>
+<body>
+    
+    <nav class="customer-nav">
+        <h1 class="pharmacy-name">Pharmacy</h1>
+
+        <div class="user-profile">
+            <span>👤 John Doe</span>
+        </div>
+
+
+        <!-- Cart Icon + Counter -->
+        <div id="cartContainer">
+            <button id="cartButton" class="cart-btn">
+            <img src="../icons/cart-icon.jpg" alt="Cart" width="28" />
+            <span id="cartCount">0</span>
+            </button>
+        </div>
+        
+        <!-- Cart Modal -->
+        <div id="cartModal" class="hidden">
+            <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="closeCart" class="modal-close">×</button>
+            </div>
+            <ul id="cartItemsList"></ul>
+            <div class="cart-footer">
+            <strong>Total: R<span id="cartTotal">0.00</span></strong>
+            <button id="placeOrder">Place Order</button>
+            </div>
+        </div>
+  
+  
+
+        <form action="../index.html" method="post">
+            <button class="logout-btn" type="submit">Logout</button>
+        </form>
+
+        <form action="../orders/order.html">
+            <button class="orders-btn" type="submit">Orders</button>
+        </form>
+        
+    </nav>
+
+    <form class="search-bar" id="searchForm" style="margin-bottom:1em;">
+        <input class="search-input"
+          type="text"
+          id="searchInput"
+          placeholder="🔍 Search medications…"
+          autocomplete="off"
+        >
+      </form>
+      
+      
+
+    <div class="medication-grid">
+
+        <div class="medication-card" >
+            <div class="medication-image">
+            <img   src="../images/Vitamin c.jpeg"/>
+            </div>
+            <h3>Vitamin C 500mg</h3>
+            <p>60 Tablets</p>
+            <p class="price">R185.22</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="medication-card" >
+            <div class="medication-image">
+            <img   src="../images/ibuprofen.jpeg"/>
+            </div>
+            <h3>Ibuprofen 200mg</h3>
+            <p>30 Tablets</p>
+            <p class="price">R40.00</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="medication-card">
+            <div class="medication-image">
+                <img   src="../images/Paracetamol.jpeg"/>
+            </div>
+            <h3>Paracetamol</h3>
+            <p>20 Tablets</p>
+            <p class="price">R30.00</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="medication-card" >
+            <div class="medication-image">
+                <img   src="../images/Azithromycin 250mg.jpeg"/>
+            </div>
+            <h3>Azithromycin 250mg</h3>
+            <p>6 Tablets</p>
+            <p class="price">R252.80</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="medication-card" >
+            <div class="medication-image">
+                <img   src="../images/Losartan 50mg.jpeg"/>
+            </div>
+            <h3>Losartan 50mg</h3>
+            <p>20 Tablets</p>
+            <p class="price">R22.40</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+        <div class="medication-card" >
+            <div class="medication-image">
+                <img   src="../images/Simvastatin 20mg.jpeg"/>
+            </div>
+            <h3>Simvastatin 20mg</h3>
+            <p>30 Tablets</p>
+            <p class="price">R55.99</p>
+            <button class="order-button">Order Now</button>
+        </div>
+        
+        <div class="medication-card" >
+            <div class="medication-image">
+                <img   src="../images/Vitamin D 1000 IU.jpeg"/>
+            </div>
+            <h3>Vitamin D 1000 IU</h3>
+            <p>60 Capsules</p>
+            <p class="price">R106.99</p>
+            <button class="order-button">Order Now</button>
+        </div>
+
+        <p id="noResults" style="display:none;">No products found.</p>
+
+        <!-- <div class="order" id="orderModal">
+            <div class="order-content">
+                <span class="close">&times;</span>
+                <h3>Order Details</h3>
+                <p id="medName"></p>
+                <label>Quantity: 
+                    <div class="number-input-container">
+                        <button class="decrement">-</button>
+                        <input type="number" class="inner-order-content" id="quantity" value="1" min="1">
+                        <button class="increment">+</button>
+                    </div>
+                    
+                </label>
+                <p>Total: R<span id="totalPrice">0.00</span></p>
+                <button class="order-btn" id="confirmOrder">Add to Cart</button>
+            </div>
+        </div> -->
+        
+    </div>
+        
+    
+</body>
+</html>
+
