@@ -10,7 +10,7 @@ function setUserSession(array $user) {
 // Redirect to login page if not authenticated
 function requireLogin() {
     if (empty($_SESSION['user_id'])) {
-        header('Location: index.html');
+        header('Location: login.html');
         exit;
     }
 }

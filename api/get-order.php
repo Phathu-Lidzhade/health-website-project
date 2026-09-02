@@ -15,8 +15,7 @@ header('Content-Type: application/json');
 
 // 1) Ensure user is logged in
 if (empty($_SESSION['user_id'])) {
-    http_response_code(401);
-    echo json_encode(['error' => 'Not authenticated']);
+    echo json_encode([]);
     exit;
 }
 $userId = $_SESSION['user_id'];
